@@ -2,11 +2,11 @@ const path = require('path')
 module.exports = {
   version: "1.5",
   title: "sillytavern-pinokio",
-  description: "",
+  description: "Brought to you by Cohee, RossAscends, and the SillyTavern community, SillyTavern is a local-install interface that allows you to interact with text generation AIs (LLMs) to chat and roleplay with custom characters.",
   icon: "icon.png",
   menu: async (kernel) => {
     let installing = await kernel.running(__dirname, "install.js")
-    let installed = await kernel.exists(__dirname, "app", "env")
+    let installed = await kernel.exists(__dirname, "app", "node_modules")
     let running = await kernel.running(__dirname, "start.js")
     if (installing) {
       return [{

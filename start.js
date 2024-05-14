@@ -4,11 +4,13 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        venv: "env",                // Edit this to customize the venv folder path
-        env: { },                   // Edit this to customize environment variables (see documentation)
+        // venv: "env",                // Edit this to customize the venv folder path
+        env: {
+          "NODE_ENV": "production"
+         },                   // Edit this to customize environment variables (see documentation)
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
-          "python app.py",    // Edit with your custom commands
+          "node server.js",    // Edit with your custom commands
         ],
         on: [{
           // The regular expression pattern to monitor.
